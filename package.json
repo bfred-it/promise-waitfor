@@ -1,6 +1,6 @@
 {
   "name": "promise-waitfor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Small utility promisification of polling.",
   "main": "index.js",
   "scripts": {
