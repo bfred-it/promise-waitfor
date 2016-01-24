@@ -1,0 +1,19 @@
+{
+  "name": "promise-waitfor",
+  "version": "0.0.0",
+  "description": "Small utility promisification of polling.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test.js"
+  },
+  "keywords": [
+    "promise",
+    "poll",
+    "wait"
+  ],
+  "author": "Simon Schick <demwizzy@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  }
+}
