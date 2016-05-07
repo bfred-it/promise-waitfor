@@ -2,9 +2,9 @@
 
 /**
  * Waits for the condition function to return a truthy value.
- * @param  {function(): *} condition The function that will be called to check the condition.
- * @param {number} [interval=50] The interval in which to check the condition.
- * @return {Promise<*>} Resolves what the either condition or value function returned.
+ * @param  {Function(): *} condition The function that will be called to check the condition.
+ * @param {Number} [interval=50] The interval in which to check the condition.
+ * @return {Promise.<*>} Resolves what the either condition or value function returned.
  */
 const nativePromise = Promise;
 module.exports = Promise => function waitFor(condition, interval) {
