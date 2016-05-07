@@ -21,7 +21,7 @@ Just run ```npm install promise-waitfor```
 # Documentation
 
 ```javascript
-Promise waitFor(Function condition, Function predicate = condition, interval int=50)
+Promise waitFor(Function condition, interval int=50)
 ```
 
 ## Examples
@@ -32,10 +32,7 @@ const waitFor = require('promise-waitfor')(YOUR_PROMISE_CONSTRUCTOR_HERE);
 waitFor(CONDITION)
 .then(...)
 
-waitFor(CONDITION, VALUEOVERRIDE)
-.then(...)
-
-waitFor(CONDITION, VALUEOVERRIDE, TEST_INTERVAL)
+waitFor(CONDITION, TEST_INTERVAL)
 .then(...)
 ```
 
