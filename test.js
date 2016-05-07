@@ -41,13 +41,6 @@ describe('waitFor', () => {
 		return waitFor(() => i >= 5);
 	});
 
-	it('Resolves value returned by the "value" function on resolve', () => {
-		let i = 0;
-		makeAutoClosingInterval(() => i++, 5, 10);
-		return waitFor(() => i >= 5, () => 42)
-		.then(v => assert(v === 42, 'Value is not 42'));
-	});
-
 	it('Rejects the error when the condition causes an error', () =>
 		waitFor(() => { throw new Error('WOOOOOOOO'); })
 		.then(() => assert.fail('Resolved', 'Rejected'), e => {
