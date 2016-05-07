@@ -4,7 +4,7 @@
   "description": "Small utility promisification of polling.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test.js"
+    "test": "eslint . && mocha test.js"
   },
   "keywords": [
     "promise",
@@ -14,6 +14,7 @@
   "author": "Simon Schick <demwizzy@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^2.9.0",
     "mocha": "^2.3.4"
   },
   "engines": {

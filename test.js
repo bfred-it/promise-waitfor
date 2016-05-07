@@ -5,16 +5,6 @@
 const waitFor = require('./index.js')();
 const assert = require('assert');
 
-function makeAutoClosingInterval(f, int, reps) {
-	let rep = 0;
-	const handle = setInterval(() => {
-		f();
-		if (++rep === reps) {
-			clearInterval(handle);
-		}
-	}, int);
-}
-
 describe('export', () => {
 	it('Correctly makes the function use the given promise implementation', () => {
 		const MyPromiseImp = class MyPromiseImp extends Promise {
