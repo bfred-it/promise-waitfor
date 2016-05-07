@@ -27,13 +27,19 @@ Promise waitFor(Function condition, interval int=50)
 ## Examples
 
 ```javascript
-const waitFor = require('promise-waitfor')(YOUR_PROMISE_CONSTRUCTOR_HERE);
+const waitFor = require('promise-waitfor');
 
 waitFor(CONDITION)
 .then(...)
 
 waitFor(CONDITION, TEST_INTERVAL)
 .then(...)
+```
+
+Alternatively, you can use a Promise constructor other than `global.Promise`:
+
+```javascript
+const waitFor = require('promise-waitfor').use(YOUR_PROMISE_CONSTRUCTOR_HERE);
 ```
 
 For now more info check test.js and the index.js for further information.

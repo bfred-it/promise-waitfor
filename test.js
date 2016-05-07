@@ -2,14 +2,14 @@
 
 /*global describe:false, it:false*/
 
-const waitFor = require('./index.js')();
+const waitFor = require('./index.js');
 const assert = require('assert');
 
 describe('export', () => {
 	it('Correctly makes the function use the given promise implementation', () => {
 		const MyPromiseImp = class MyPromiseImp extends Promise {
 		};
-		const otherWaitFor = require('./index.js')(MyPromiseImp);
+		const otherWaitFor = waitFor.use(MyPromiseImp);
 		assert(
 			otherWaitFor(() => true) instanceof MyPromiseImp,
 			'Wrong promise implemetation'
