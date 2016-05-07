@@ -37,3 +37,10 @@ waitFor(CONDITION, TEST_INTERVAL)
 ```
 
 For now more info check test.js and the index.js for further information.
+
+# Changelog
+
+## 2.0.0-rc1
+
+- Removed the second argument as it was generally confusing and can be easily replace with an extra `.then()` call, eg: `waitFor(() => {...}, () => getSomething()` can be converted to `waitFor() => {...)).then(getSomething)`
+- Updates eslint config, eslint is now a dev dependency.
