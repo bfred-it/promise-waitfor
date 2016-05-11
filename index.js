@@ -2,13 +2,12 @@
 
 /**
  * Waits for the condition function to return a truthy value.
+ * @param  {Function(): Promise} Promise An ES6-compatible Promise implementation.
  * @param  {Function(): *} condition The function that will be called to check the condition.
  * @param {Number} [interval=50] The interval in which to check the condition.
  * @return {Promise.<*>} Resolves what the either condition or value function returned.
  */
-const nativePromise = Promise;
-module.exports = Promise => function waitFor(condition, interval) {
-	Promise = Promise || nativePromise;
+function waitFor(Promise, condition, interval) {
 	interval = interval || 50;
 	return new Promise((resolve, reject) => {
 		const int = setInterval(() => {
@@ -24,4 +23,11 @@ module.exports = Promise => function waitFor(condition, interval) {
 			}
 		}, interval);
 	});
-};
+}
+
+function use (Promise) {
+	return waitFor.bind(null, Promise);
+}
+
+module.exports = use(Promise);
+module.exports.use = use;
