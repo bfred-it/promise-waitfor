@@ -50,3 +50,7 @@ For now more info check test.js and the index.js for further information.
 
 - Removed the second argument as it was generally confusing and can be easily replace with an extra `.then()` call, eg: `waitFor(() => {...}, () => getSomething()` can be converted to `waitFor() => {...)).then(getSomething)`
 - Updated eslint config, eslint is now a dev dependency.
+
+## 2.0.0
+- waitFor is now default bound to the native Promise implementation.
+- In order to use a custom one you now need to use `const wf = require('promise-waitfor)'.use(MY_IMPL`.
