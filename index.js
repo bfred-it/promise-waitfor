@@ -2,8 +2,8 @@
 
 /**
  * Waits for the condition function to return a truthy value.
- * @param  {Function(): Promise} Promise An ES6-compatible Promise implementation.
- * @param  {Function(): *} condition The function that will be called to check the condition.
+ * @param  {Function} Promise An ES6-compatible Promise implementation.
+ * @param  {Function} condition The function that will be called to check the condition.
  * @param {Number} [interval=50] The interval in which to check the condition.
  * @return {Promise.<*>} Resolves what the either condition or value function returned.
  */
@@ -25,6 +25,11 @@ function waitFor(Promise, condition, interval) {
 	});
 }
 
+/**
+ * Binds waitFor to the specified promise implementation.
+ * @param  {Function} Promise The promise constructor.
+ * @return {Function} Returns the bound waitFor function.
+ */
 function use (Promise) {
 	return waitFor.bind(null, Promise);
 }

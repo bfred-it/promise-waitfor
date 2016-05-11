@@ -152,6 +152,9 @@
 		"prefer-const": "error",
 		"prefer-spread": "error",
 		"prefer-template": "error",
-		"require-yield": "error"
+		"require-yield": "error",
+
+		"valid-jsdoc": "error",
+		"require-jsdoc": "error"
 	}
 }
