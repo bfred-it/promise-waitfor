@@ -3,8 +3,9 @@
   "version": "2.0.0",
   "description": "Small utility promisification of polling.",
   "main": "index.js",
+  "repository": "bfred-it/promise-waitfor-es5",
   "scripts": {
-    "test": "eslint . && mocha test.js"
+    "test": "xo && mocha test.js"
   },
   "keywords": [
     "promise",
@@ -14,10 +15,25 @@
   "author": "Simon Schick <demwizzy@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^2.9.0",
+    "xo": "*",
     "mocha": "^2.3.4"
   },
   "engines": {
     "node": ">=4.0.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "ignores": [
+      "test.js"
+    ],
+    "rules": {
+      "no-var": 0,
+      "prefer-arrow-callback": 0,
+      "no-shadow": 0
+    }
   }
 }

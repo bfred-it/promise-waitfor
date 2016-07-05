@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * Waits for the condition function to return a truthy value.
  * @param  {Function} Promise An ES6-compatible Promise implementation.
@@ -9,17 +7,17 @@
  */
 function waitFor(Promise, condition, interval) {
 	interval = interval || 50;
-	return new Promise(function(resolve, reject) {
-		var int = setInterval(function() {
+	return new Promise(function (resolve, reject) {
+		var int = setInterval(function () {
 			try {
 				var isDone = condition();
 				if (isDone) {
 					resolve(isDone);
 					clearInterval(int);
 				}
-			} catch (error) {
+			} catch (err) {
 				clearInterval(int);
-				reject(error);
+				reject(err);
 			}
 		}, interval);
 	});
@@ -30,7 +28,7 @@ function waitFor(Promise, condition, interval) {
  * @param  {Function} Promise The promise constructor.
  * @return {Function} Returns the bound waitFor function.
  */
-function use (Promise) {
+function use(Promise) {
 	return waitFor.bind(null, Promise);
 }
 
