@@ -1,5 +1,5 @@
 {
-  "name": "promise-waitfor",
+  "name": "promise-waitfor-es5",
   "version": "2.0.0",
   "description": "Small utility promisification of polling.",
   "main": "index.js",

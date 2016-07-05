@@ -9,10 +9,10 @@
  */
 function waitFor(Promise, condition, interval) {
 	interval = interval || 50;
-	return new Promise((resolve, reject) => {
-		const int = setInterval(() => {
+	return new Promise(function(resolve, reject) {
+		var int = setInterval(function() {
 			try {
-				const isDone = condition();
+				var isDone = condition();
 				if (isDone) {
 					resolve(isDone);
 					clearInterval(int);

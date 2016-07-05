@@ -2,21 +2,21 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [promise-waitfor](#promise-waitfor)
+- [promise-waitfor-es5](#promise-waitfor-es5)
 - [Documentation](#documentation)
   - [Examples](#examples)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# promise-waitfor
+# promise-waitfor-es5
 
-[![NPM](https://nodei.co/npm/promise-waitfor.png)](https://nodei.co/npm/promise-waitfor/)
+[![NPM](https://nodei.co/npm/promise-waitfor-es5.png)](https://nodei.co/npm/promise-waitfor-es5/)
 
-[![Build Status](https://travis-ci.org/SimonSchick/promise-waitfor.svg?branch=master)](https://travis-ci.org/SimonSchick/promise-waitfor)
-[![Dependencies](https://david-dm.org/SimonSchick/promise-waitfor.svg)](https://david-dm.org/SimonSchick/promise-waitfor)
-[![npm version](http://img.shields.io/npm/v/promise-waitfor.svg)](https://npmjs.org/package/promise-waitfor)
+[![Build Status](https://travis-ci.org/bfred-it/promise-waitfor-es5.svg?branch=master)](https://travis-ci.org/bfred-it/promise-waitfor-es5)
+[![Dependencies](https://david-dm.org/bfred-it/promise-waitfor-es5.svg)](https://david-dm.org/bfred-it/promise-waitfor-es5)
+[![npm version](http://img.shields.io/npm/v/promise-waitfor-es5.svg)](https://npmjs.org/package/promise-waitfor-es5)
 
-Just run ```npm install promise-waitfor```
+Just run ```npm install promise-waitfor-es5```
 
 # Documentation
 
@@ -27,7 +27,7 @@ Promise waitFor(Function condition, interval int=50)
 ## Examples
 
 ```javascript
-const waitFor = require('promise-waitfor');
+const waitFor = require('promise-waitfor-es5');
 
 waitFor(CONDITION)
 .then(...)
@@ -39,7 +39,7 @@ waitFor(CONDITION, TEST_INTERVAL)
 Alternatively, you can use a Promise constructor other than `global.Promise`:
 
 ```javascript
-const waitFor = require('promise-waitfor').use(YOUR_PROMISE_CONSTRUCTOR_HERE);
+const waitFor = require('promise-waitfor-es5').use(YOUR_PROMISE_CONSTRUCTOR_HERE);
 ```
 
 For now more info check test.js and the index.js for further information.
@@ -53,4 +53,4 @@ For now more info check test.js and the index.js for further information.
 
 ## 2.0.0
 - waitFor is now default bound to the native Promise implementation.
-- In order to use a custom one you now need to use `const wf = require('promise-waitfor)'.use(MY_IMPL`.
+- In order to use a custom one you now need to use `const wf = require('promise-waitfor-es5)'.use(MY_IMPL`.
