@@ -10,8 +10,6 @@
 
 # promise-waitfor-es5
 
-[![NPM](https://nodei.co/npm/promise-waitfor-es5.png)](https://nodei.co/npm/promise-waitfor-es5/)
-
 [![Build Status](https://travis-ci.org/bfred-it/promise-waitfor-es5.svg?branch=master)](https://travis-ci.org/bfred-it/promise-waitfor-es5)
 [![Dependencies](https://david-dm.org/bfred-it/promise-waitfor-es5.svg)](https://david-dm.org/bfred-it/promise-waitfor-es5)
 [![npm version](http://img.shields.io/npm/v/promise-waitfor-es5.svg)](https://npmjs.org/package/promise-waitfor-es5)
